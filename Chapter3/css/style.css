@@ -1,0 +1,41 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+}
+.wrap{
+    width:1000px;
+    height:670px;
+    display: flex;
+}
+header{
+    width:200px;
+    background-color: red;
+}
+.contents{
+    width: 800px;
+}
+.slide{
+    height:350px;
+    background-color: orange;
+}
+.con{
+    height:200px;
+    background-color: yellow;
+    display: flex;
+}
+.notice{
+    width:300px;
+}
+.gall{
+    width:300px;
+    background-color: green;
+}
+.go{
+    width:200px;
+}
+
+footer{
+    height: 120px;
+    background-color: blue;
+}

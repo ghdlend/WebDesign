@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.wrap{
+    height:950px;
+}
+.top{
+    height:850px;
+    display:flex;
+}
+header{
+    width:250px;
+    background-color: red;
+}
+.contents{
+    width:calc(100% - 250px);
+}
+.slide{
+    height:400px;
+    background-color: orange;
+}
+.banner{
+    height:200px;
+    background-color: yellow;
+}
+.con{
+    height:250px;
+    background-color: green;
+}
+footer{
+    height: 100px;
+    background-color: blue;
+}
