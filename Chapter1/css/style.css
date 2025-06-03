@@ -23,6 +23,7 @@ body{
     margin:auto;
 }
 header{
+    position:relative;
     height:100px;
     background-color: #fff;
     padding-top: 35px;
@@ -33,9 +34,7 @@ nav{
     top: 40px;
     right: 10px;
     z-index: 10;
-    text-decoration: none;
-    
-    
+    text-decoration: none; 
 }
 nav>ul{
     display: flex;
@@ -68,21 +67,238 @@ nav>ul>li:hover>a{
 }
 .slide{
     height:300px;
-    background-color: blue;
+    overflow:hidden;
+}
+.slide ul{
+    width:3600px;
+    height:300px;
+    display:flex;
+}
+.slide ul li {
+    position:relative;
+    width: 1200px;
+    height: 300px;
+}
+.slide ul li h2 {
+    background-color: rgba(61,25,95,0.7);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:20px;
+    border-radius: 50px;
+    font-size:28px;
+    color:#fff;
+}
+.slide ul li h2 span{
+    color:#f96167;
+}
+.slide ul li a {
+    display:block;
+    height: 100%;
+}
+.slide ul li.s1{
+    background: url(../images/s1.jpg) no-repeat center/cover;
+}
+.slide ul li.s2{
+    background: url(../images/s2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3{
+    background: url(../images/s3.jpg) no-repeat center/cover;
 }
 .contents{
     height:200px;
     display:flex;
-    background-color: orange;
+}
+.contents .notice {
+    padding:10px;
+}
+.notice h2{
+    background: #3d155f;
+    color:#fff;
+    border-radius:10px 10px 0 0;
+    width:120px;
+    text-align:center;
+    padding:5px 0;
+    font-size:20px;
+}
+.notice ul{
+    background:#3d155f;
+    padding:5px 15px;
+}
+.notice ul li {
+    border-bottom:1px dashed #fff;
+}
+.notice ul li:last-child{
+    border-bottom:none;
+}
+.notice ul li a {
+    display:block;
+    padding:5px 0;
+    position:relative;
+    color:#fff;
+}
+.notice ul li p{
+    width:260px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice ul li span{
+    position:absolute;
+    right:0;
+    top:5px;
 }
 .contents article{
     width:400px;
 }
 .contents .gall{
-    background-color: green;
+    padding : 10px;
 }
+.gall h2{
+    background-color: #f96167;
+    color:#fff;
+    border-radius: 10px 10px 0 0;
+    width:120px;
+    text-align: center;
+    padding: 5px 0;
+    font-size:20px;
+}
+.gall ul{
+    display:flex;
+    background-color: #f96167;
+    padding:10px;
+    gap:10px;
+    justify-content: space-between;
+}
+.gall ul li {
+    flex : 1;
+}
+.gall ul li img{
+    width:100%;
+    height:120px;
+    object-fit: cover;
+    display:block;
+    border-radius: 5px;
+}
+.gall ul li:hover{
+    opacity:0.7;
+}
+.contents .go{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    padding:10px;
+}
+.go h2{
+    color:#3d155f;
+    margin-bottom: 20px;
+}
+.go ul{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+.go ul li {
+    text-align: center;
+}
+.go ul li a{
+    display: block;
+    height: 100%;
+}
+.go ul li p {
+    width:80px;
+    height:80px;
+    background-color: #3d155f;
+    padding-top:20px;
+    border-radius:20px;
+    margin-bottom:5px;
+}
+.go ul li span {
+    font-weight: bold;
+}
+
 footer{
+    position:relative;
     height:100px;
-    background-color: black;
-    color:white;
+    background-color: #666;
+    color:#fff;
+    padding-left:20px;
+    display:flex;
+    gap:30px;
+    align-items: center;
+}
+.fsns{
+    position:absolute;
+    display: flex;
+    gap: 10px;
+    top: 30px;
+    right: 30px;
+    
+}
+.fsns li a{
+    display: block;
+    width:30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align:center;
+    padding-top:3px;
+}
+.fsns li:nth-child(1) a{
+    background-color: #3f5b9a;
+}
+.fsns li:nth-child(2) a{
+    background-color: #47b749;
+}
+.fsns li:nth-child(3) a{
+    background-color: red;
+}
+.popup {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #f96197;
+    border-radius: 20px;
+    z-index: 9999;
+    display:none;
+}
+.popup img {
+    max-width: 100%;          
+    height: auto;             
+    display: block;           
+    margin: 0 auto;           
+    border-radius: 10px;      
+}
+
+.wrap{
+    position:relative;    
+}
+.inner{
+    width:1200px;
+    margin:auto;
+}
+.popup h2{
+    color:#f96167;
+    margin-bottom:20px;
+}
+.popup .text{
+    margin:20px 0;
+}
+.popup .close{
+    text-align: right;
+}
+.popup .close button{
+    background-color: #f96167;
+    border:0;
+    padding: 10px;
+    color:#fff;
+}
+.popup .close button:hover{
+    background-color: #3d155f;;
 }
